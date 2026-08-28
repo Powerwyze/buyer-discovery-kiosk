@@ -1,0 +1,113 @@
+{
+  "event": {
+    "name": "Americas Food & Beverage Show & Conference",
+    "shortName": "AF&B",
+    "edition": "30th Anniversary",
+    "producer": "World Trade Center Miami",
+    "dates": "September 14–16, 2026",
+    "venue": "Miami Beach Convention Center",
+    "venueDetail": "Halls A, B & C",
+    "address": "1901 Convention Center Drive, Miami Beach, FL 33139",
+    "officialSite": "https://www.americasfoodandbeverage.com/"
+  },
+  "disclaimer": "Company names and booth numbers below are SAMPLE placeholders for this internal PowerWyze demo. They are not official AF&B exhibitors.",
+  "roles": [
+    { "id": "buyer", "label": "Buyer / Purchaser" },
+    { "id": "distributor", "label": "Distributor" },
+    { "id": "retailer", "label": "Retailer" },
+    { "id": "foodservice", "label": "Foodservice / Hospitality" },
+    { "id": "importer", "label": "Importer / Exporter" },
+    { "id": "broker", "label": "Broker" },
+    { "id": "other", "label": "Other" }
+  ],
+  "categories": [
+    {
+      "id": "beverages",
+      "label": "Beverages",
+      "note": "Waters, juices, coffee, RTD",
+      "accent": "#3EE0C8",
+      "companies": [
+        { "name": "Andes Spring Waters", "booth": "SAMPLE-101", "blurb": "Still and sparkling source waters for retail and foodservice." },
+        { "name": "Citrus Coast Sodas", "booth": "SAMPLE-102", "blurb": "Cane-sugar sodas and mixer concentrates for hospitality." },
+        { "name": "Harbor Roast Coffee", "booth": "SAMPLE-103", "blurb": "Wholesale roasted coffee and cold-brew concentrate." }
+      ]
+    },
+    {
+      "id": "dry-goods",
+      "label": "Dry Goods",
+      "note": "Pantry, grains, spices",
+      "accent": "#E8C547",
+      "companies": [
+        { "name": "Granary Mills", "booth": "SAMPLE-201", "blurb": "Flours, ancient grains, and bulk cereal blends." },
+        { "name": "Pantry Line Staples", "booth": "SAMPLE-202", "blurb": "Shelf-stable condiments and dry mix programs." },
+        { "name": "Spice Route Trading", "booth": "SAMPLE-203", "blurb": "Spice blends and seasoning systems for private label." }
+      ]
+    },
+    {
+      "id": "protein-seafood",
+      "label": "Protein / Seafood",
+      "note": "Meat, poultry, catch",
+      "accent": "#FF6B6B",
+      "companies": [
+        { "name": "Gulf Catch Seafood", "booth": "SAMPLE-301", "blurb": "Frozen and fresh-frozen seafood portions for foodservice." },
+        { "name": "Prairie Grain Meats", "booth": "SAMPLE-302", "blurb": "Value-added beef and poultry cuts for distributors." },
+        { "name": "Atlantic Cold Pack", "booth": "SAMPLE-303", "blurb": "IQF seafood and protein packs for export programs." }
+      ]
+    },
+    {
+      "id": "produce",
+      "label": "Produce",
+      "note": "Fresh, tropical, packed",
+      "accent": "#7CDE6B",
+      "companies": [
+        { "name": "Tropic Grove Produce", "booth": "SAMPLE-401", "blurb": "Tropical fruit and packed citrus for retail." },
+        { "name": "Highland Berry Co.", "booth": "SAMPLE-402", "blurb": "Berry programs and frozen fruit for foodservice." },
+        { "name": "Valley Fresh Pack", "booth": "SAMPLE-403", "blurb": "Value-added salads and cut produce for grocers." }
+      ]
+    },
+    {
+      "id": "packaging",
+      "label": "Packaging",
+      "note": "Bottles, film, closures",
+      "accent": "#7AA2FF",
+      "companies": [
+        { "name": "ClearForm Packaging", "booth": "SAMPLE-501", "blurb": "PET and glass-look bottles for beverage brands." },
+        { "name": "FiberWrap Solutions", "booth": "SAMPLE-502", "blurb": "Fiber-based trays and wrap for fresh foods." },
+        { "name": "SealRight Closures", "booth": "SAMPLE-503", "blurb": "Caps, pumps, and tamper-evident closures." }
+      ]
+    },
+    {
+      "id": "equipment",
+      "label": "Equipment",
+      "note": "Process, cold, prep",
+      "accent": "#C084FC",
+      "companies": [
+        { "name": "LineFlow Equipment", "booth": "SAMPLE-601", "blurb": "Compact filling and capping lines for CPG startups." },
+        { "name": "ColdVault Systems", "booth": "SAMPLE-602", "blurb": "Display and back-of-house refrigeration." },
+        { "name": "PrepStation Tools", "booth": "SAMPLE-603", "blurb": "Prep tables and smallwares for commissary kitchens." }
+      ]
+    },
+    {
+      "id": "private-label",
+      "label": "Private Label",
+      "note": "Contract pack, house brands",
+      "accent": "#F0A36B",
+      "companies": [
+        { "name": "House Brand Labs", "booth": "SAMPLE-701", "blurb": "Turnkey private-label recipe and pack programs." },
+        { "name": "White Label Kitchen", "booth": "SAMPLE-702", "blurb": "Co-packing for sauces, snacks, and dry mixes." },
+        { "name": "Contract Pack Co.", "booth": "SAMPLE-703", "blurb": "Low-MOQ contract packing for emerging brands." }
+      ]
+    },
+    {
+      "id": "logistics",
+      "label": "Logistics",
+      "note": "Cold chain, import, 3PL",
+      "accent": "#5AD1E8",
+      "companies": [
+        { "name": "Harbor Lane Logistics", "booth": "SAMPLE-801", "blurb": "Port-to-DC freight for food importers." },
+        { "name": "ColdChain Express", "booth": "SAMPLE-802", "blurb": "Temperature-controlled last-mile for perishables." },
+        { "name": "CrossDock Americas", "booth": "SAMPLE-803", "blurb": "Cross-dock and 3PL for regional retail programs." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+  <meta name="theme-color" content="#07080C" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>PowerWyze Buyer Discovery Station · AF&amp;B 2026</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml" />
+</head>
+<body class="kiosk-portrait">
+
+  <div class="bg" aria-hidden="true"></div>
+  <div class="bg__glow" aria-hidden="true"></div>
+  <div class="bg__grain" aria-hidden="true"></div>
+
+  <div class="rotate-warn" aria-hidden="true">
+    <div class="rotate-warn__icon">↻</div>
+    <div class="rotate-warn__title">Please rotate to portrait</div>
+    <div class="rotate-warn__sub">This experience is designed for a 1080×1920 portrait kiosk.</div>
+  </div>
+
+  <div class="app">
+
+    <header class="topbar" role="banner">
+      <div class="brand" aria-label="PowerWyze">
+        <img class="brand__mark" src="/assets/logo.svg" alt="" />
+        <div class="brand__text">
+          <span class="brand__name">POWERWYZE</span>
+          <span class="brand__sub">Buyer Discovery Station</span>
+        </div>
+      </div>
+      <div class="event-meta">
+        <span class="event-meta__day">AF&amp;B · 30TH ANNIVERSARY</span>
+        <span class="event-meta__loc">Sept 14–16 2026 · Miami Beach</span>
+      </div>
+    </header>
+
+    <div class="badge-row">
+      <span class="pill pill--gold">INTERNAL · DEMO-002</span>
+      <span class="pill">HOUSE ACTIVATION</span>
+    </div>
+
+    <section class="herobar">
+      <h1 class="herobar__title" id="heroTitle">What are you sourcing?</h1>
+      <p class="herobar__lede" id="heroLede">Tap a category. We’ll recommend SAMPLE participating companies, then capture your buyer lead.</p>
+    </section>
+
+    <ol class="steps" aria-label="How it works">
+      <li class="steps__item is-active" data-step="home"><b>1</b> Category</li>
+      <li class="steps__item" data-step="recs"><b>2</b> SAMPLE recs</li>
+      <li class="steps__item" data-step="lead"><b>3</b> Lead</li>
+      <li class="steps__item" data-step="thanks"><b>4</b> Done</li>
+    </ol>
+
+    <main class="stage" role="main">
+
+      <section class="screen screen--home is-active" id="screenHome" aria-hidden="false">
+        <div class="cat-grid" id="catGrid" role="list"></div>
+      </section>
+
+      <section class="screen screen--recs" id="screenRecs" aria-hidden="true" hidden>
+        <button class="back" id="recsBack" type="button">← Categories</button>
+        <div class="chosen" id="recsChosen"></div>
+        <div class="sample-banner" role="note">
+          SAMPLE recommendations only — not official AF&amp;B exhibitors. Booth numbers are placeholders.
+        </div>
+        <div class="rec-list" id="recList"></div>
+        <button class="btn btn--primary btn--block btn--xl" id="recsContinue" type="button">
+          Capture my buyer lead
+        </button>
+      </section>
+
+      <section class="screen screen--lead" id="screenLead" aria-hidden="true" hidden>
+        <button class="back" id="leadBack" type="button">← Recommendations</button>
+        <div class="chosen" id="leadChosen"></div>
+        <form class="lead-form" id="leadForm" novalidate>
+          <label class="field" for="nameInput">
+            <span>Name</span>
+            <input id="nameInput" name="name" type="text" autocomplete="name" maxlength="80" placeholder="Your name" required />
+          </label>
+          <label class="field" for="companyInput">
+            <span>Company</span>
+            <input id="companyInput" name="company" type="text" autocomplete="organization" maxlength="120" placeholder="Company name" required />
+          </label>
+          <label class="field" for="emailInput">
+            <span>Email</span>
+            <input id="emailInput" name="email" type="email" inputmode="email" autocomplete="email" maxlength="320" placeholder="you@company.com" required />
+          </label>
+          <label class="field" for="roleInput">
+            <span>Role</span>
+            <select id="roleInput" name="role" required></select>
+          </label>
+          <label class="field" for="interestInput">
+            <span>Sourcing interest</span>
+            <input id="interestInput" name="sourcingInterest" type="text" readonly tabindex="-1" />
+          </label>
+          <label class="consent" for="consentCheck">
+            <input id="consentCheck" name="consent" type="checkbox" />
+            <span>I agree to share this buyer information with PowerWyze for this internal AF&amp;B house activation. SAMPLE company names are placeholders, not official exhibitors.</span>
+          </label>
+          <div class="form-err" id="leadErr" role="alert"></div>
+          <button class="btn btn--primary btn--block btn--xl" id="leadSubmit" type="submit">
+            Submit lead
+          </button>
+        </form>
+      </section>
+
+      <section class="screen screen--thanks" id="screenThanks" aria-hidden="true" hidden>
+        <div class="thanks">
+          <div class="thanks__mark" aria-hidden="true">✓</div>
+          <h2 class="thanks__title">Lead captured</h2>
+          <p class="thanks__lede" id="thanksLede">Thank you. Your sourcing interest is on the board.</p>
+          <p class="thanks__meta" id="thanksMeta"></p>
+          <div class="sample-banner">SAMPLE recs only. Official show: americasfoodandbeverage.com</div>
+          <button class="btn btn--primary btn--block btn--xl" id="thanksReset" type="button">
+            Start next buyer
+          </button>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="footer">
+      <span>PowerWyze · AF&amp;B 30th · WTC Miami · Sept 14–16 2026</span>
+      <span class="footer__sub">Turn booth traffic into engagement, structured lead capture, and branded takeaways.</span>
+    </footer>
+
+  </div>
+
+  <link rel="stylesheet" href="/assets/osk.css" />
+  <script src="/assets/osk.js" defer></script>
+  <script src="/app.js" defer></script>
+</body>
+</html>

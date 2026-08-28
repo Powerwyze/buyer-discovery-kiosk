@@ -1,0 +1,12 @@
+{
+  "name": "buyer-discovery-kiosk",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PowerWyze Buyer Discovery Station — AF&B Miami Beach 2026 (DEMO-002, internal house activation)",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "nodemailer": "^9.0.6"
+  }
+}
